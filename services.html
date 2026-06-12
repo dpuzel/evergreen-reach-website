@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services • Evergreen Reach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --forest: #0f3d2e;
+            --sage: #4a6659;
+            --cream: #f8f5ef;
+            --gold: #c9a227;
+            --warm: #d4a574;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #c9a227;
+            transform: translateY(-1px);
+        }
+
+        .service-detail {
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .service-detail:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-[#f8f5ef] text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="evergreen-reach-logo-main.jpg" alt="Evergreen Reach" class="h-10 w-auto">
+                <div>
+                    <span class="font-bold text-2xl tracking-tight text-[var(--forest)]">Evergreen Reach</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="evergreen-reach-elevated.html" class="nav-link text-[var(--forest)]">Home</a>
+                <a href="evergreen-reach-services.html" class="nav-link text-[var(--forest)]">Services</a>
+                <a href="evergreen-reach-about.html" class="nav-link text-[var(--forest)]">About</a>
+                <a href="evergreen-reach-elevated.html#contact" class="nav-link text-[var(--forest)]">Contact</a>
+            </div>
+            <div>
+                <a href="evergreen-reach-elevated.html#contact" 
+                   class="px-6 py-3 bg-[var(--forest)] text-white rounded-full text-sm font-medium hover:bg-[#1a4d3a] transition">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1719154884392-36a9b707a4a4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Idaho Lake" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="heading-serif text-6xl md:text-7xl text-white mb-6 tracking-tight">Our Services</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto">Reliable digital care tailored for small and rural businesses — no pressure, just results.</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <!-- Introduction -->
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="heading-serif text-4xl text-[var(--forest)] mb-6">How We Help You Thrive Online</h2>
+            <p class="text-lg text-gray-600">We handle the online headaches so you can focus on what matters most — your customers, your community, and your peace of mind.</p>
+        </div>
+
+        <!-- Google Business Profile Optimization -->
+        <div class="service-detail bg-white rounded-3xl p-10 mb-12 border border-gray-100">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-2 bg-[var(--sage)]/10 text-[var(--sage)] px-4 py-1 rounded-full text-sm mb-6">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Local Visibility
+                    </div>
+                    <h3 class="heading-serif text-4xl text-[var(--forest)] mb-4">Google Business Profile Optimization</h3>
+                    <p class="text-lg text-gray-600 mb-8">Make sure customers find you when they search locally. We optimize your profile so you show up strong with accurate info, great photos, and steady activity.</p>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Complete profile setup & optimization</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Regular posts & updates</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Review management & response templates</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Local SEO best practices</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-5">
+                    <img src="https://picsum.photos/id/1015/800/600" alt="GBP Optimization" class="rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </div>
+
+        <!-- Website Care & Maintenance -->
+        <div class="service-detail bg-white rounded-3xl p-10 mb-12 border border-gray-100">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-5">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Website Care" class="rounded-2xl shadow-xl">
+                </div>
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-2 bg-[var(--sage)]/10 text-[var(--sage)] px-4 py-1 rounded-full text-sm mb-6">
+                        <i class="fas fa-globe"></i>
+                        Always On
+                    </div>
+                    <h3 class="heading-serif text-4xl text-[var(--forest)] mb-4">Website Care & Maintenance</h3>
+                    <p class="text-lg text-gray-600 mb-8">Your website is your 24/7 storefront. We keep it fast, secure, updated, and looking sharp — so you never have to worry about it.</p>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Monthly updates & security patches</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Content updates & fresh photos</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Performance & speed optimization</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Backup & recovery protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Local Lead Generation -->
+        <div class="service-detail bg-white rounded-3xl p-10 border border-gray-100">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-2 bg-[var(--sage)]/10 text-[var(--sage)] px-4 py-1 rounded-full text-sm mb-6">
+                        <i class="fas fa-users"></i>
+                        More Customers
+                    </div>
+                    <h3 class="heading-serif text-4xl text-[var(--forest)] mb-4">Local Lead Generation</h3>
+                    <p class="text-lg text-gray-600 mb-8">Bring in the right customers who are looking for exactly what you offer. We help you get found and turn interest into real conversations.</p>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Targeted local SEO strategies</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Review & reputation building</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Simple lead capture tools</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-[var(--gold)] mt-1"></i> Monthly performance reports</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-5">
+                    <img src="https://picsum.photos/id/106/800/600" alt="Local Leads" class="rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-[var(--forest)] py-20 text-white">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="heading-serif text-5xl mb-6">Ready to reach more of your community?</h2>
+            <p class="text-xl text-white/80 mb-10">Let's start with a relaxed chat — email or text works great. No pressure, just honest conversation about what your business needs.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:hello@evergreen-reach.com" 
+                   class="px-8 py-4 bg-white text-[var(--forest)] rounded-full font-medium inline-flex items-center justify-center gap-2 hover:bg-gray-100">
+                    <i class="fas fa-envelope"></i> Email Us
+                </a>
+                <a href="evergreen-reach-elevated.html#contact" 
+                   class="px-8 py-4 border-2 border-white/70 text-white rounded-full font-medium inline-flex items-center justify-center gap-2 hover:bg-white/10">
+                    Learn More on Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <img src="evergreen-reach-logo-main.jpg" alt="Evergreen Reach" class="h-8 w-auto">
+                    <span class="font-bold text-xl text-[var(--forest)]">Evergreen Reach</span>
+                </div>
+                <div class="text-center md:text-right text-sm text-gray-500">
+                    Built with pine, purpose, and genuine care.<br>
+                    © 2026 Evergreen Reach • All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
