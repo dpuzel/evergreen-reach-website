@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services • Evergreen Reach</title>
+    <title>Evergreen Reach • Digital Care for Rural & Small Businesses</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
         
         :root {
             --forest: #0f3d2e;
@@ -27,6 +27,12 @@
             line-height: 1.1;
         }
 
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
         .nav-link {
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -36,110 +42,365 @@
             transform: translateY(-1px);
         }
 
-        .service-detail {
+        .service-card, .pricing-card, .testimonial-card {
             transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
         }
         
-        .service-detail:hover {
+        .service-card:hover {
             transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .pricing-card.popular {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            transform: scale(1.02);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px) scale(1.01);
+        }
+
+        .forest-gradient {
+            background: linear-gradient(135deg, #0f3d2e 0%, #1a4d3a 100%);
+        }
+
+        .warm-gradient {
+            background: linear-gradient(to right, #c9a227, #d4a574);
+        }
+
+        .leaf-bg {
+            background-image: 
+                radial-gradient(circle at 25% 30%, rgba(201, 162, 39, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 75% 70%, rgba(74, 102, 89, 0.08) 0%, transparent 50%);
+        }
+
+        .prose-warm p {
+            color: #374151;
+            line-height: 1.75;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .modal {
+            animation: modalPop 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .nav-scrolled {
+            background-color: rgba(248, 245, 239, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .evergreen-text {
+            background: linear-gradient(90deg, #0f3d2e, #1a4d3a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtle-grid {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-10V8h-2v16h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6v-4H4v4H0v2h4v4h2V8h4V6H6z' fill='%230f3d2e' fill-opacity='0.04'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 60px 60px;
         }
     </style>
 </head>
-<body class="bg-[#f8f5ef] text-gray-800">
+<body class="bg-[#f8f5ef] text-[#1a2f28] overflow-x-hidden">
     <!-- NAV -->
     <nav class="bg-white border-b border-[#e5e0d5] sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center h-20">
                 <a href="/" class="flex items-center gap-x-3">
-                    <img src="/images/evergreen-reach-logo-main.png" alt="Evergreen Reach Logo" class="h-12 w-auto">
+                    <img src="/images/logo.png" alt="Evergreen Reach" class="h-12 w-auto">
                 </a>
+
                 <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                    <a href="/" class="nav-link text-[#1f2e2a]">Home</a>
                     <a href="/about" class="nav-link text-[#1f2e2a]">About</a>
-                    <a href="/services" class="nav-link text-[#1f2e2a] font-semibold">Services</a>
-                    <a href="/#plans" class="nav-link text-[#1f2e2a]">Plans</a>
+                    <a href="/services" class="nav-link text-[#1f2e2a]">Services</a>
+                    <a href="#how-it-works" class="nav-link text-[#1f2e2a]">How It Works</a>
+                    <a href="#plans" class="nav-link text-[#1f2e2a]">Plans</a>
                 </div>
-                <a href="/#contact" class="hidden md:block px-6 py-2.5 text-sm font-semibold rounded-full bg-[#0f3d2e] text-white hover:bg-[#1a4d3a]">Get In Touch</a>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="#contact" class="px-5 py-2.5 text-sm font-semibold rounded-full border-2 border-[#0f3d2e] text-[#0f3d2e] hover:bg-[#0f3d2e] hover:text-white transition">Let's Talk</a>
+                    <a href="#plans" class="px-6 py-2.5 text-sm font-semibold rounded-full bg-[#0f3d2e] text-white hover:bg-[#1a4d3a]">See Plans</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-[#0f3d2e] hover:bg-[#e5e0d5] rounded-full transition-colors">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-[#e5e0d5] bg-[#f8f5ef]">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-sm font-medium">
+                <a href="/about" class="mobile-nav-link py-1 text-[#374151]">About</a>
+                <a href="/services" class="mobile-nav-link py-1 text-[#374151]">Services</a>
+                <a href="/#how" class="mobile-nav-link py-1 text-[#374151]">How it Works</a>
+                <a href="/#plans" class="mobile-nav-link py-1 text-[#374151]">Plans</a>
+                <div class="pt-4 flex flex-col gap-y-3">
+                    <a href="/#contact" class="w-full text-center px-5 py-3 rounded-full border border-[#0f3d2e] text-[#0f3d2e] font-semibold">Let's Talk</a>
+                    <a href="/#plans" class="w-full text-center px-5 py-3 rounded-full bg-[#0f3d2e] text-white font-semibold">See Care Plans</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <div class="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1719154884392-36a9b707a4a4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-             alt="Idaho Lake" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60"></div>
-        <div class="relative z-10 text-center px-6 max-w-4xl">
-            <h1 class="heading-serif text-6xl md:text-7xl text-white mb-6 tracking-tight">Our Services</h1>
-            <p class="text-xl text-white/90 max-w-2xl mx-auto">Reliable digital care tailored for small and rural businesses — no pressure, just results.</p>
-        </div>
-    </div>
+    
 
-    <div class="max-w-7xl mx-auto px-6 py-16">
-        <!-- Introduction -->
-        <div class="max-w-3xl mx-auto text-center mb-16">
-            <h2 class="heading-serif text-4xl text-[var(--forest)] mb-6">How We Help You Thrive Online</h2>
-            <p class="text-lg text-gray-600">We handle the online headaches so you can focus on what matters most — your customers, your community, and your peace of mind.</p>
-        </div>
+    <!-- HERO -->
+    <header class="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-cover bg-center" 
+            style="background-image: linear-gradient(rgba(15, 61, 46, 0.65), rgba(15, 61, 46, 0.55)), url('https://images.unsplash.com/photo-1719154884392-36a9b707a4a4?q=80&w=1632&auto=format&fit=crop');">
+        <div class="relative max-w-5xl mx-auto px-6 text-center pt-8 pb-16">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-white/60 shadow-sm mb-8">
+                <span class="text-xs font-semibold tracking-[1.5px] text-[#0f3d2e] uppercase">Built for the businesses that build communities</span>
+            </div>
 
-        <div class="space-y-16">
-            <!-- Google Business Profile -->
-            <div class="bg-white rounded-3xl p-10 border border-[#e5e0d5]">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-14 h-14 rounded-2xl bg-[#0f3d2e] flex items-center justify-center"><i class="fa-solid fa-map-marked text-white text-3xl"></i></div>
-                    <h2 class="text-3xl font-bold tracking-tight text-[#0f3d2e]">Google Business Profile Optimization</h2>
-                </div>
-                <p class="text-lg text-[#4b5563]">Make sure customers find you when they search locally. We optimize your profile so you show up strong with accurate info, great photos, and steady activity.</p>
-                <div class="mt-6 grid md:grid-cols-2 gap-4 text-sm">
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Complete profile setup &amp; optimization</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Regular posts &amp; updates</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Review management &amp; response templates</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Local SEO best practices</div>
+            <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-white leading-[0.96] mb-6">Your business deserves to thrive online.</h1>
+            
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl text-white/90 font-light tracking-tight mb-10">Warm, reliable digital care from people who actually show up. We handle the online headaches so you can focus on what matters most.</p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#plans" class="group w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-9 py-4 rounded-2xl bg-white text-[#0f3d2e] font-semibold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition">Explore Monthly Plans <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></a>
+                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-8 py-4 rounded-2xl border-2 border-white/70 text-white font-semibold text-lg hover:bg-white/10 transition">Let's Talk — No Pressure</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-5xl mx-auto px-6 pt-20 pb-16">
+        <div class="grid md:grid-cols-12 gap-x-12 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a227] mb-3">OUR STORY</div>
+                <h2 class="section-header tracking-tighter text-[#0f3d2e] mb-6">We're here for the businesses that build communities.</h2>
+                
+                <div class="prose prose-lg max-w-none prose-warm">
+                    <p class="text-[17px] leading-relaxed text-[#374151]">
+                        Evergreen Reach was born because too many good, hardworking small and rural businesses get left behind online. 
+                        They pour everything into their craft, their customers, and their communities… but the digital stuff? It falls through the cracks.
+                    </p>
+                    <p class="text-[17px] leading-relaxed text-[#374151] mt-5">
+                        We’re here to change that. No complicated contracts, no over-promising, just reliable monthly care from people who treat your business like it’s our own neighbor’s.
+                    </p>
                 </div>
             </div>
 
-            <!-- Website Care -->
-            <div class="bg-white rounded-3xl p-10 border border-[#e5e0d5]">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-14 h-14 rounded-2xl bg-[#0f3d2e] flex items-center justify-center"><i class="fa-solid fa-globe text-white text-3xl"></i></div>
-                    <h2 class="text-3xl font-bold tracking-tight text-[#0f3d2e]">Website Care &amp; Maintenance</h2>
-                </div>
-                <p class="text-lg text-[#4b5563]">Your website is your 24/7 storefront. We keep it fast, secure, updated, and looking sharp — so you never have to worry about it.</p>
-                <div class="mt-6 grid md:grid-cols-2 gap-4 text-sm">
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Monthly updates &amp; security patches</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Content updates &amp; fresh photos</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Performance &amp; speed optimization</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Backup &amp; recovery protection</div>
-                </div>
-            </div>
-
-            <!-- Lead Generation -->
-            <div class="bg-white rounded-3xl p-10 border border-[#e5e0d5]">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-14 h-14 rounded-2xl bg-[#0f3d2e] flex items-center justify-center"><i class="fa-solid fa-users text-white text-3xl"></i></div>
-                    <h2 class="text-3xl font-bold tracking-tight text-[#0f3d2e]">Local Lead Generation Support</h2>
-                </div>
-                <p class="text-lg text-[#4b5563]">Bring in the right customers who are looking for exactly what you offer. We help you get found and turn interest into real conversations.</p>
-                <div class="mt-6 grid md:grid-cols-2 gap-4 text-sm">
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Targeted local SEO strategies</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Review &amp; reputation building</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Simple lead capture tools</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Monthly performance reports</div>
+            <div class="md:col-span-5 mt-10 md:mt-0">
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-[#e5e0d5]">
+                    <div class="uppercase text-xs tracking-widest font-semibold text-[#c9a227] mb-4">THE EVERGREEN WAY</div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-6 h-6 flex-shrink-0 text-[#c9a227]"><i class="fa-solid fa-seedling fa-lg"></i></div>
+                            <div>
+                                <div class="font-semibold text-[#0f3d2e]">Rooted in Honesty</div>
+                                <div class="text-sm text-[#4b5563] mt-0.5">We tell you exactly what’s happening and what’s possible. No fluff, ever.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-6 h-6 flex-shrink-0 text-[#c9a227]"><i class="fa-solid fa-handshake fa-lg"></i></div>
+                            <div>
+                                <div class="font-semibold text-[#0f3d2e]">Grown Together</div>
+                                <div class="text-sm text-[#4b5563] mt-0.5">Your success is our success. We celebrate your wins like they’re our own.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-6 h-6 flex-shrink-0 text-[#c9a227]"><i class="fa-solid fa-tree fa-lg"></i></div>
+                            <div>
+                                <div class="font-semibold text-[#0f3d2e]">Reaching Further</div>
+                                <div class="text-sm text-[#4b5563] mt-0.5">We help your business become the obvious choice in your community.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="text-center mt-16">
-            <a href="#contact" class="inline-block px-10 py-4 bg-[#0f3d2e] text-white font-semibold rounded-2xl">Ready to grow together? Let's chat.</a>
+    <!-- SERVICES -->
+    <section id="services" class="bg-white py-16 border-y border-[#e5e0d5]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a227] mb-2">WHAT WE TEND</div>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-[#0f3d2e]">Reliable care for what matters most.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="service-card bg-[#f8f5ef] rounded-3xl p-8 border border-[#e5e0d5]">
+                    <div class="w-14 h-14 rounded-2xl bg-[#0f3d2e] flex items-center justify-center mb-6"><i class="fa-solid fa-map-marked text-white text-3xl"></i></div>
+                    <h3 class="font-semibold text-2xl tracking-tight text-[#0f3d2e] mb-3">Google Business Profile Mastery</h3>
+                    <p class="text-[#4b5563] mb-6">We keep your listing accurate, active, and inviting so customers can easily find and trust you.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Complete profile optimization</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Regular posts & updates</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Review monitoring & responses</li>
+                    </ul>
+                </div>
+                <div class="service-card bg-[#f8f5ef] rounded-3xl p-8 border border-[#e5e0d5]">
+                    <div class="w-14 h-14 rounded-2xl bg-[#0f3d2e] flex items-center justify-center mb-6"><i class="fa-solid fa-globe text-white text-3xl"></i></div>
+                    <h3 class="font-semibold text-2xl tracking-tight text-[#0f3d2e] mb-3">Website Care & Steady Growth</h3>
+                    <p class="text-[#4b5563] mb-6">We handle the monthly upkeep so your site stays fast, secure, and welcoming.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Monthly security & updates</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Backup monitoring & quick fixes</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Quarterly health check reports</li>
+                    </ul>
+                </div>
+                <div class="service-card bg-[#f8f5ef] rounded-3xl p-8 border border-[#e5e0d5]">
+                    <div class="w-14 h-14 rounded-2xl bg-[#0f3d2e] flex items-center justify-center mb-6"><i class="fa-solid fa-users text-white text-3xl"></i></div>
+                    <h3 class="font-semibold text-2xl tracking-tight text-[#0f3d2e] mb-3">Local Lead Generation Support</h3>
+                    <p class="text-[#4b5563] mb-6">We help more of the right people discover and choose you.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Local SEO visibility boosts</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Strategic content suggestions</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> Ongoing optimization</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a227] mb-2">SIMPLE. HONEST. EFFECTIVE.</div>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-[#0f3d2e]">How we grow together</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="bg-white rounded-3xl p-7 border border-[#e5e0d5]">
+                <div class="text-[#c9a227] text-5xl font-bold tracking-tighter mb-4">01</div>
+                <div class="font-semibold text-xl mb-2 text-[#0f3d2e]">Discovery Chat</div>
+                <p class="text-[#4b5563] text-sm">We hop on a relaxed chat (or coffee if you're local) to understand your business, goals, and what's been frustrating you online.</p>
+            </div>
+            <div class="bg-white rounded-3xl p-7 border border-[#e5e0d5]">
+                <div class="text-[#c9a227] text-5xl font-bold tracking-tighter mb-4">02</div>
+                <div class="font-semibold text-xl mb-2 text-[#0f3d2e]">Audit & Roadmap</div>
+                <p class="text-[#4b5563] text-sm">We take a close look at your current Google presence, website, and local visibility. Then we build a clear, prioritized plan tailored to you.</p>
+            </div>
+            <div class="bg-white rounded-3xl p-7 border border-[#e5e0d5]">
+                <div class="text-[#c9a227] text-5xl font-bold tracking-tighter mb-4">03</div>
+                <div class="font-semibold text-xl mb-2 text-[#0f3d2e]">We Handle the Work</div>
+                <p class="text-[#4b5563] text-sm">You get back to doing what you do best. We manage posts, updates, responses, and improvements — month after month.</p>
+            </div>
+            <div class="bg-white rounded-3xl p-7 border border-[#e5e0d5]">
+                <div class="text-[#c9a227] text-5xl font-bold tracking-tighter mb-4">04</div>
+                <div class="font-semibold text-xl mb-2 text-[#0f3d2e]">Monthly Growth Reports</div>
+                <p class="text-[#4b5563] text-sm">You'll always know what's happening. Clear reports, honest insights, and a quick chat to adjust course whenever you want.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANS -->
+    <section id="plans" class="bg-[#0f3d2e] py-16 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a227] mb-2">MONTHLY CARE PLANS</div>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter">Reliable monthly care.<br>Simple and honest.</h2>
+                <p class="mt-3 max-w-md mx-auto text-white/70">No hidden fees. No long contracts. Cancel or pause whenever life calls.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Basic -->
+                <div class="pricing-card bg-white text-[#1a2f28] rounded-3xl p-8 flex flex-col">
+                    <div>
+                        <div class="font-semibold text-lg">Basic Care</div>
+                        <div class="mt-6 flex items-baseline"><span class="text-6xl font-bold tracking-tighter">$99</span><span class="text-[#4b5563] ml-1.5">/mo</span></div>
+                        <div class="text-sm text-[#4b5563] mt-1">A solid start with reliable monthly care</div>
+                    </div>
+                    <div class="my-8 flex-1">
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Google Business Profile optimization &amp; management</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Basic website health checks &amp; updates</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Monthly progress report</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Email support</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="mt-auto block text-center w-full py-3.5 rounded-2xl border-2 border-[#0f3d2e] font-semibold hover:bg-[#0f3d2e] hover:text-white transition">Start with Basic</a>
+                </div>
+
+                <!-- Standard -->
+                <div class="pricing-card popular bg-white text-[#1a2f28] rounded-3xl p-8 flex flex-col relative border-2 border-[#c9a227]">
+                    <div class="absolute -top-3 right-6 bg-[#c9a227] text-[#0f3d2e] text-xs font-bold px-4 py-1 rounded-full tracking-wider">MOST POPULAR</div>
+                    <div>
+                        <div class="font-semibold text-lg">Standard Care</div>
+                        <div class="mt-6 flex items-baseline"><span class="text-6xl font-bold tracking-tighter">$169</span><span class="text-[#4b5563] ml-1.5">/mo</span></div>
+                        <div class="text-sm text-[#4b5563] mt-1">The right balance — most businesses love this one</div>
+                    </div>
+                    <div class="my-8 flex-1">
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Everything in Basic</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Full Google Business Profile management + content</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Regular website maintenance &amp; improvements</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Local lead generation support</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Priority email + chat support</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="mt-auto block text-center w-full py-3.5 rounded-2xl bg-[#c9a227] text-[#0f3d2e] font-semibold hover:bg-[#d4a574]">Choose Standard</a>
+                </div>
+
+                <!-- Premium -->
+                <div class="pricing-card bg-white text-[#1a2f28] rounded-3xl p-8 flex flex-col">
+                    <div>
+                        <div class="font-semibold text-lg">Premium Care</div>
+                        <div class="mt-6 flex items-baseline"><span class="text-6xl font-bold tracking-tighter">$249</span><span class="text-[#4b5563] ml-1.5">/mo</span></div>
+                        <div class="text-sm text-[#4b5563] mt-1">Full support for businesses ready to shine</div>
+                    </div>
+                    <div class="my-8 flex-1">
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Everything in Standard</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Full website care + proactive improvements</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Quarterly strategy calls (30 min)</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Advanced lead generation focus</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#c9a227] mt-1"></i> <span>Direct chat/text access to our team</span></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="mt-auto block text-center w-full py-3.5 rounded-2xl border-2 border-[#0f3d2e] font-semibold hover:bg-[#0f3d2e] hover:text-white transition">Go Premium</a>
+                </div>
+            </div>
+            <p class="text-center text-white/60 text-sm mt-8">All plans include a free 15-minute discovery chat. Add-ons available for one-time projects.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-[#0f3d2e] mb-4">Ready to stop worrying and start thriving?</h2>
+        <p class="text-xl text-[#4b5563] mb-8">Book a free, no-pressure discovery chat. We'll talk about where you are and where you want to go. Zero obligation.</p>
+        
+        <div class="max-w-md mx-auto bg-white rounded-3xl p-8 shadow-sm border border-[#e5e0d5]">
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 border border-[#e5e0d5] rounded-xl" required>
+                <input type="email" name="email" placeholder="Email Address" class="w-full px-4 py-3 border border-[#e5e0d5] rounded-xl" required>
+                <textarea name="message" placeholder="Tell us a bit about your business and what you're looking for..." rows="4" class="w-full px-4 py-3 border border-[#e5e0d5] rounded-xl" required></textarea>
+                <button type="submit" class="w-full py-4 bg-[#0f3d2e] text-white font-semibold rounded-2xl hover:bg-[#1a4d3a]">Send Message</button>
+            </form>
+            <p class="text-sm text-[#4b5563] mt-4">We usually reply within a few hours during business days. No spam, ever.</p>
+        </div>
+        
+        <div class="mt-8 text-sm text-[#4b5563]">
+            Or reach us directly: <a href="mailto:hello@evergreen-reach.com" class="text-[#0f3d2e] font-medium">hello@evergreen-reach.com</a> • <a href="tel:2082695369" class="text-[#0f3d2e] font-medium">(208) 269-5369</a>
+        </div>
+    </section>
 
         <!-- Footer -->
     <footer class="bg-[#0f3d2e] text-white/80 py-16">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex items-center gap-4">
-                    <img src="/images/evergreen-reach-logo-main.png" alt="Evergreen Reach" class="h-12 w-auto opacity-90">
+                    <img src="/images/logo.png" alt="Evergreen Reach" class="h-12 w-auto opacity-90">
                 </div>
                 <div class="text-center md:text-right">
                     <p class="text-sm">&copy; 2026 Evergreen Reach. All rights reserved.</p>
@@ -148,5 +409,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition - bodyRect - offset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
