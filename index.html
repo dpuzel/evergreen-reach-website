@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evergreen Reach • Digital Care for Small & Rural Businesses</title>
+    <title>Evergreen Reach • Digital Care for Rural & Small Businesses</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -14,21 +14,108 @@
             --sage: #4a6659;
             --cream: #f8f5ef;
             --gold: #c9a227;
+            --warm: #d4a574;
         }
         
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
         
-        .nav-link { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-        .nav-link:hover { color: #c9a227; transform: translateY(-1px); }
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         
-        .service-card, .pricing-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .service-card:hover, .pricing-card:hover { transform: translateY(-6px); }
+        .nav-link:hover {
+            color: #c9a227;
+            transform: translateY(-1px);
+        }
+
+        .service-card, .pricing-card, .testimonial-card {
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
         
-        .pricing-card.popular { box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); transform: scale(1.02); }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .pricing-card.popular {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            transform: scale(1.02);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px) scale(1.01);
+        }
+
+        .forest-gradient {
+            background: linear-gradient(135deg, #0f3d2e 0%, #1a4d3a 100%);
+        }
+
+        .warm-gradient {
+            background: linear-gradient(to right, #c9a227, #d4a574);
+        }
+
+        .leaf-bg {
+            background-image: 
+                radial-gradient(circle at 25% 30%, rgba(201, 162, 39, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 75% 70%, rgba(74, 102, 89, 0.08) 0%, transparent 50%);
+        }
+
+        .prose-warm p {
+            color: #374151;
+            line-height: 1.75;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .modal {
+            animation: modalPop 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .nav-scrolled {
+            background-color: rgba(248, 245, 239, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .evergreen-text {
+            background: linear-gradient(90deg, #0f3d2e, #1a4d3a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtle-grid {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-10V8h-2v16h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6v-4H4v4H0v2h4v4h2V8h4V6H6z' fill='%230f3d2e' fill-opacity='0.04'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
     </style>
 </head>
-<body class="bg-[#f8f5ef] text-[#1a2f28]">
+<body class="bg-[#f8f5ef] text-[#1a2f28] overflow-x-hidden">
     <!-- NAV -->
     <nav class="bg-white border-b border-[#e5e0d5] sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6">
