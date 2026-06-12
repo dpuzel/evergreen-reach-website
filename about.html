@@ -1,1 +1,214 @@
-FULL CONTENT OF about.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us • Evergreen Reach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --forest: #0f3d2e;
+            --sage: #4a6659;
+            --cream: #f8f5ef;
+            --gold: #c9a227;
+            --warm: #d4a574;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #c9a227;
+            transform: translateY(-1px);
+        }
+
+        .story-section {
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-[#f8f5ef] text-[#1a2f28]">
+    <!-- NAV -->
+    <nav class="bg-white border-b border-[#e5e0d5] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-x-3">
+                    <img src="/images/evergreen-reach-logo.png" alt="Evergreen Reach Logo" class="h-12 w-auto">
+                </a>
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="/" class="nav-link text-[#1f2e2a]">Home</a>
+                    <a href="/about" class="nav-link text-[#1f2e2a] font-semibold">About</a>
+                    <a href="/services" class="nav-link text-[#1f2e2a]">Services</a>
+                    <a href="/#plans" class="nav-link text-[#1f2e2a]">Plans</a>
+                </div>
+                <a href="/#contact" class="hidden md:block px-6 py-2.5 text-sm font-semibold rounded-full bg-[#0f3d2e] text-white hover:bg-[#1a4d3a]">Get In Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-6 space-y-4 text-center">
+                <a href="evergreen-reach-elevated.html" class="block py-2 text-[#0f3d2e] font-medium">Home</a>
+                <a href="evergreen-reach-services.html" class="block py-2 text-[#0f3d2e] font-medium">Services</a>
+                <a href="evergreen-reach-about.html" class="block py-2 text-[#0f3d2e] font-medium">About</a>
+                <a href="evergreen-reach-elevated.html#contact" class="block py-2 text-[#0f3d2e] font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative h-[500px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1719154884392-36a9b707a4a4?q=80&w=1632&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70"></div>
+        <div class="relative z-10 text-center px-6 max-w-3xl">
+            <div class="inline-flex items-center gap-2 bg-white/90 text-[#0f3d2e] text-sm font-medium px-5 py-2 rounded-3xl mb-6">
+                <i class="fa-solid fa-seedling"></i>
+                OUR STORY
+            </div>
+            <h1 class="heading-serif text-5xl md:text-6xl text-white tracking-tighter leading-none mb-6">
+                Growing stronger together
+            </h1>
+            <p class="text-white/90 text-lg max-w-md mx-auto">
+                From the pines of Idaho to small towns across the country — we're here because good businesses deserve to be found.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="max-w-4xl mx-auto px-6 py-20">
+        <div class="prose prose-lg mx-auto text-[#374151]">
+            <p class="text-2xl leading-relaxed text-[#0f3d2e] font-light">
+                Evergreen Reach was born because too many good, hardworking small and rural businesses get left behind online.
+            </p>
+            <p class="mt-8 text-lg">
+                We saw owners pouring their hearts into their work — fixing cars, serving coffee, running farms, helping their communities — only to struggle with Google, websites, and staying visible in a digital world that moves too fast.
+            </p>
+            <p class="mt-6 text-lg">
+                So we decided to change that. No complicated contracts. No over-promising. Just reliable monthly care from people who treat your business like it’s our own neighbor’s.
+            </p>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="bg-[#0f3d2e] py-20 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a227]">THE EVERGREEN WAY</div>
+                <h2 class="heading-serif text-4xl tracking-tighter mt-3">How we show up</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="story-section bg-white/10 backdrop-blur rounded-3xl p-8 border border-white/10">
+                    <div class="text-5xl mb-6">🌲</div>
+                    <h3 class="text-2xl font-semibold mb-4">Rooted in Reality</h3>
+                    <p class="text-white/80">We keep things honest and practical. No fluff, no false promises — just steady, reliable work that actually moves the needle for your business.</p>
+                </div>
+                <div class="story-section bg-white/10 backdrop-blur rounded-3xl p-8 border border-white/10">
+                    <div class="text-5xl mb-6">🤝</div>
+                    <h3 class="text-2xl font-semibold mb-4">Neighbor First</h3>
+                    <p class="text-white/80">Your success is personal to us. We treat every client like family — with the same care we'd give our own small-town neighbors.</p>
+                </div>
+                <div class="story-section bg-white/10 backdrop-blur rounded-3xl p-8 border border-white/10">
+                    <div class="text-5xl mb-6">🌱</div>
+                    <h3 class="text-2xl font-semibold mb-4">Steady Growth</h3>
+                    <p class="text-white/80">Like a healthy forest, real growth takes time and consistent care. We're in it for the long haul with monthly support you can count on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="max-w-4xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="heading-serif text-4xl tracking-tighter text-[#0f3d2e] mb-8">Built by people who understand</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="text-4xl text-[#c9a227] mt-1">01</div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">We know rural life</h3>
+                            <p class="text-[#4b5563]">From Idaho backroads to small-town main streets, we understand what actually works for businesses that serve real communities.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-4xl text-[#c9a227] mt-1">02</div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">No big-agency nonsense</h3>
+                            <p class="text-[#4b5563]">We're not here to sell you fancy strategies you'll never use. Just honest, effective digital care that fits your world.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-4xl text-[#c9a227] mt-1">03</div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">Real people, real care</h3>
+                            <p class="text-[#4b5563]">You'll work directly with us — no endless support tickets or junior staff. We're invested in your success because we actually care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-10 border border-[#e5e0d5] shadow-xl">
+                <div class="text-[#c9a227] text-sm font-medium tracking-widest mb-4">OUR PROMISE</div>
+                <blockquote class="text-2xl leading-relaxed italic text-[#0f3d2e]">
+                    “We’ll show up consistently, communicate clearly, and handle your online presence with the same respect we’d give our own backyard.”
+                </blockquote>
+                <div class="mt-8 flex items-center gap-4">
+                    <div class="h-px flex-1 bg-[#e5e0d5]"></div>
+                    <span class="text-sm font-medium text-[#4b5563]">— The Evergreen Reach Team</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-br from-[#0f3d2e] to-[#1a4d3a] py-20 text-white text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="heading-serif text-4xl tracking-tighter mb-6">Ready to grow together?</h2>
+            <p class="text-lg text-white/80 mb-10">Whether you're just getting started online or ready for more steady support, we're here when you are. No pressure, just good conversation.</p>
+            <a href="evergreen-reach-elevated.html#contact" 
+               class="inline-flex items-center gap-3 bg-white text-[#0f3d2e] px-10 py-4 rounded-3xl font-semibold text-lg hover:bg-[#c9a227] hover:text-white transition-all">
+                Let's Chat <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f3d2e] text-white/80 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <img src="/images/evergreen-reach-logo.png" alt="Evergreen Reach" class="h-12 w-auto opacity-90">
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm">&copy; 2026 Evergreen Reach. All rights reserved.</p>
+                    <p class="text-xs mt-2 text-white/50">Built with pine, purpose, and genuine care.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Tailwind script already loaded
+    </script>
+</body>
+</html>
