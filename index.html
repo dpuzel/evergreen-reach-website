@@ -146,7 +146,7 @@
         }
 
         .dark .section-header {
-            color: #a7f3d0;
+            color: #d1fae5;
         }
 
         .dark .nav-link {
@@ -166,12 +166,15 @@
             color: #d1fae5;
         }
 
-        /* Improve text contrast in dark mode (warmer, more readable greens) */
+        /* Improve text contrast + hierarchy in dark mode */
         .dark p,
-        .dark li,
+        .dark li {
+            color: #a7f3d0;
+        }
+
         .dark .text-slate-600,
         .dark .text-slate-700 {
-            color: #a7f3d0;
+            color: #86efac;
         }
     </style>
 </head>
@@ -189,7 +192,7 @@
                         - The placeholder will show until you add your real logo.
                         - There's a fallback SVG leaf if the image fails to load.
                     -->
-                    <img src="/images/logo.png" 
+                    <img src="https://via.placeholder.com/44x44/166534/ffffff?text=ER" 
                          alt="Evergreen Reach Logo" 
                          class="w-11 h-11 rounded-2xl object-contain group-hover:scale-105 transition-transform shadow-inner"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -212,24 +215,17 @@
                     <a href="#way" class="nav-link text-slate-700 hover:text-emerald-800">The Evergreen Way</a>
                     <a href="#services" class="nav-link text-slate-700 hover:text-emerald-800">What We Tend</a>
                     <a href="#process" class="nav-link text-slate-700 hover:text-emerald-800">How It Works</a>
-                    <a href="#plans" class="nav-link text-slate-700 hover:text-emerald-800">Plans</a>
+                <!--    <a href="#plans" class="nav-link text-slate-700 hover:text-emerald-800">Plans</a>  -->
                     <a href="#stories" class="nav-link text-slate-700 hover:text-emerald-800">Stories</a>
                 </div>
 
                 <div class="hidden md:flex items-center gap-x-4">
-                    <!-- Dark Mode Toggle -->
-                    <button id="dark-mode-toggle"
-                            class="w-10 h-10 flex items-center justify-center rounded-2xl text-emerald-700 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
-                            aria-label="Toggle dark mode">
-                        <i class="fa-solid fa-moon text-lg"></i>
-                    </button>
-
                     <a href="#contact" 
-                       class="px-6 py-2.5 text-sm font-semibold rounded-2xl border border-emerald-700 text-emerald-800 hover:bg-emerald-50 dark:text-emerald-200 dark:border-emerald-600 dark:hover:bg-emerald-900/30 transition-colors">
+                       class="px-6 py-2.5 text-sm font-semibold rounded-2xl border border-emerald-700 text-emerald-200 hover:bg-emerald-900/30 dark:border-emerald-600 transition-colors">
                         Get Started
                     </a>
                     <a href="#contact" 
-                       class="px-6 py-2.5 text-sm font-semibold rounded-2xl bg-emerald-800 text-white hover:bg-emerald-900 transition-colors shadow-sm">
+                       class="px-6 py-2.5 text-sm font-semibold rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white transition-colors shadow-sm">
                         Book Free Call
                     </a>
                 </div>
@@ -260,7 +256,7 @@
                     </a>
                     <a href="#contact" 
                        class="mobile-nav-link w-full text-center px-6 py-3 rounded-2xl bg-emerald-800 text-white font-semibold">
-                        Book Free Discovery Call
+                        Book Free Discovery Chat
                     </a>
                 </div>
             </div>
@@ -269,7 +265,7 @@
 
     <!-- HERO -->
     <header class="pt-20 min-h-[95vh] flex items-center relative overflow-hidden text-white bg-cover bg-center bg-no-repeat dark:brightness-[0.85]"
-            style="background-image: linear-gradient(rgba(15, 64, 51, 0.68), rgba(15, 64, 51, 0.55)), url('https://images.unsplash.com/photo-1719154884392-36a9b707a4a4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            style="background-image: linear-gradient(rgba(13, 62, 49, 0.45), rgba(13, 62, 9, 0.33)), url('https://images.unsplash.com/photo-1719154884392-36a9b707a4a4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
         <!-- 
             HERO BACKGROUND IMAGE:
             - Currently using a beautiful evergreen forest from Unsplash (perfect rural vibe).
@@ -287,7 +283,7 @@
             <h1 class="text-6xl md:text-7xl lg:text-7xl font-bold tracking-tighter leading-none mb-6">
                 Your business deserves to thrive online.
             </h1>
-                        
+            
             <p class="max-w-2xl mx-auto text-lg md:text-xl text-emerald-100/90 mb-10 leading-relaxed">
                 Warm, reliable digital care from people who actually show up. 
                 We handle the online headaches so you can focus on what matters most.
@@ -317,7 +313,7 @@
                 </a>
                 <a href="#contact" 
                    class="inline-flex items-center justify-center gap-x-3 px-8 py-4 text-lg font-semibold rounded-3xl border-2 border-white/70 hover:bg-white/10 active:bg-white/15 transition-all">
-                    Book Free Discovery Call
+                    Book Free Discovery Chat
                 </a>
             </div>
             
@@ -470,7 +466,7 @@
                     <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-800 text-white flex items-center justify-center font-mono text-sm font-bold">01</div>
                     <h3 class="font-semibold text-xl tracking-tight">Discovery Chat</h3>
                 </div>
-                <p class="text-slate-600">We hop on a relaxed call (or coffee if you’re local) to understand your business, your goals, and what’s been frustrating you online.</p>
+                <p class="text-slate-600">We hop on a relaxed call (or email/text if you prefer) to understand your business, your goals, and what’s been frustrating you online.</p>
             </div>
 
             <!-- Step 2 -->
@@ -588,12 +584,12 @@
             </div>
             
             <p class="text-center text-emerald-300 text-sm mt-10 max-w-md mx-auto">
-                All plans include a free 15-minute discovery call to make sure we’re the right fit. Add-ons available for one-time projects.
+                All plans include a free discovery chat to make sure we’re the right fit. Add-ons available for one-time projects.
             </p>
         </div>
     </section>
 
-    <!-- REAL STORIES -->
+    <!-- REAL STORIES 
     <section id="stories" class="max-w-6xl mx-auto px-6 py-20">
         <div class="text-center mb-12">
             <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">FROM THE COMMUNITY</span>
@@ -601,8 +597,8 @@
             <p class="mt-3 text-xl text-emerald-800/80">They’re growing. We’re just helping tend the garden.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Testimonial 1 -->
+        <div class="grid md:grid-cols-3 gap-8"> -->
+            <!-- Testimonial 1 
             <div class="story-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/60 rounded-3xl p-8">
                 <div class="text-emerald-600 mb-6">
                     <i class="fa-solid fa-quote-left text-4xl opacity-40"></i>
@@ -619,9 +615,9 @@
                         <div class="text-xs text-slate-500">Owner, Thompson’s Hardware • Rural Idaho</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Testimonial 2 -->
+            <!-- Testimonial 2 
             <div class="story-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/60 rounded-3xl p-8">
                 <div class="text-emerald-600 mb-6">
                     <i class="fa-solid fa-quote-left text-4xl opacity-40"></i>
@@ -638,9 +634,9 @@
                         <div class="text-xs text-slate-500">Owner, Pine &amp; Petal Café • Eastern Washington</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Testimonial 3 -->
+            <!-- Testimonial 3 
             <div class="story-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/60 rounded-3xl p-8">
                 <div class="text-emerald-600 mb-6">
                     <i class="fa-solid fa-quote-left text-4xl opacity-40"></i>
@@ -659,7 +655,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- LET’S GROW YOUR REACH / CONTACT -->
     <section id="contact" class="bg-white dark:bg-emerald-950 border-t border-slate-100 dark:border-emerald-800 py-20">
@@ -693,7 +689,7 @@
                                 </div>
                                 <div>
                                     <div class="font-medium text-emerald-900">(208) 269-5369</div>
-                                    <div class="text-xs text-slate-500">Mon–Fri, 8am–5pm Mountain</div>
+                                    <div class="text-xs text-slate-500">Mon–Fri, 8am–5pm Pacific</div>
                                 </div>
                             </a>
                         </div>
@@ -744,7 +740,7 @@
                             
                             <button type="submit"
                                     class="w-full mt-2 py-4 rounded-2xl bg-emerald-800 hover:bg-emerald-900 active:bg-emerald-950 transition-all text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-x-2 shadow-sm">
-                                <span>REQUEST MY FREE DISCOVERY CALL</span>
+                                <span>REQUEST MY FREE DISCOVERY CHAT</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                             
@@ -773,13 +769,13 @@
     <!-- FOOTER -->
     <footer class="bg-emerald-950 text-emerald-200/80 py-10 text-sm">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-y-4 text-xs tracking-wider">
-            <div>© 2026 Evergreen Reach. Built with care for the businesses that build communities.</div>
+            <div>© 2026 Evergreen Reach. Built with pine and trust.</div>
             
             <div class="flex items-center gap-x-6">
                 <a href="mailto:hello@evergreen-reach.com" class="hover:text-white transition-colors">hello@evergreen-reach.com</a>
                 <a href="tel:2082695369" class="hover:text-white transition-colors">(208) 269-5369</a>
                 <span class="hidden md:inline text-emerald-800">•</span>
-                <span class="text-emerald-800">Northern Idaho &amp; the rural West</span>
+                <span class="text-emerald-800">For the businesses that build communities.</span>
             </div>
         </div>
     </footer>
@@ -929,7 +925,7 @@
             initMobileMenu();
             initSmoothScroll();
             initAccessibility();
-            initDarkMode();
+            forceDarkMode();
             
             // Easter egg / fun for best friend: console message
             console.log('%c🌲 Huckleberry brother — clean site loaded. Ready to crush it for small businesses. Let\'s goooo!', 'color:#166534; font-size: 9px');
@@ -938,70 +934,13 @@
             // document.getElementById('name').value = 'Daniel Puzel';
         }
 
-        // ============================================
-        // CLEAN DARK MODE TOGGLE (you asked for it 😎)
-        // Safe version that works even when opened as local file
-        // ============================================
-        function initDarkMode() {
-            const toggleBtn = document.getElementById('dark-mode-toggle');
+        // Force permanent dark mode (no toggle)
+        function forceDarkMode() {
             const html = document.documentElement;
-            const icon = toggleBtn.querySelector('i');
-
-            // Helper to safely use localStorage (prevents crash in sandboxed/file:// environments)
-            function safeGetLocalStorage(key) {
-                try {
-                    return localStorage.getItem(key);
-                } catch (e) {
-                    return null; // Fails silently in sandboxed previews
-                }
-            }
-
-            function safeSetLocalStorage(key, value) {
-                try {
-                    localStorage.setItem(key, value);
-                } catch (e) {
-                    // Ignore - preference just won't persist when opened locally
-                }
-            }
-
-            // Check saved preference or system preference
-            const savedTheme = safeGetLocalStorage('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                html.classList.add('dark');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            }
-
-            toggleBtn.addEventListener('click', () => {
-                html.classList.toggle('dark');
-                
-                if (html.classList.contains('dark')) {
-                    safeSetLocalStorage('theme', 'dark');
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-                } else {
-                    safeSetLocalStorage('theme', 'light');
-                    icon.classList.remove('fa-sun');
-                    icon.classList.add('fa-moon');
-                }
-            });
-
-            // Optional: Listen for system changes (also wrapped safely)
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!safeGetLocalStorage('theme')) {
-                    if (e.matches) {
-                        html.classList.add('dark');
-                        icon.classList.remove('fa-moon');
-                        icon.classList.add('fa-sun');
-                    } else {
-                        html.classList.remove('dark');
-                        icon.classList.remove('fa-sun');
-                        icon.classList.add('fa-moon');
-                    }
-                }
-            });
+            html.classList.add('dark');
+            
+            // Optional: still respect system preference on first visit if no saved choice,
+            // but since we're going permanent dark, we just force it.
         }
 
         // Start the magic
