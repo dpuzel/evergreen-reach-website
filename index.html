@@ -703,69 +703,71 @@
                     <div class="bg-[#f8f7f4] dark:bg-emerald-950 border border-emerald-100/70 dark:border-emerald-800 rounded-3xl p-8 md:p-10">
                         <h3 class="font-semibold text-2xl tracking-tight mb-2 text-emerald-100">Book Your Free Discovery Chat</h3>
                         <p class="text-sm text-slate-600 mb-8">Tell us a little about your business and we’ll reach out within a few hours to schedule a time that works for you.</p>
-       
+                        
                         <form id="contact-form" action="https://formspree.io/f/YOUR_CODE_HERE" method="POST" class="space-y-5">
                             <!-- Hidden fields -->
                             <input type="hidden" name="_subject" value="New Website Lead - Evergreen Reach!">
                             <input type="hidden" name="_gotcha" style="display:none;">
-
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">YOUR NAME</label>
-                                    <input type="text" name="name" required
+                                    <input type="text" id="name" required 
                                            class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">BUSINESS NAME</label>
-                                    <input type="text" name="business"
+                                    <input type="text" id="business" 
                                            class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                             </div>
-           
+                            
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">EMAIL ADDRESS</label>
-                                    <input type="email" name="email" required
+                                    <input type="email" id="email" required 
                                            class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">PHONE NUMBER</label>
-                                    <input type="tel" name="phone"
+                                    <input type="tel" id="phone" 
                                            class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                             </div>
-           
+                            
                             <div>
                                 <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">WHAT'S GOING ON WITH YOUR ONLINE PRESENCE RIGHT NOW?</label>
-                                <textarea name="message" rows="4" required
+                                <textarea id="message" rows="4" required
                                           class="form-input w-full px-4 py-3.5 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600 resize-y min-h-[110px]"
                                           placeholder="Tell us about your Google listing, website, or what kind of customers you're hoping to reach..."></textarea>
                             </div>
-           
+                            
                             <button type="submit"
                                     class="w-full mt-2 py-4 rounded-2xl bg-emerald-800 hover:bg-emerald-900 active:bg-emerald-950 transition-all text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-x-2 shadow-sm">
                                 <span>REQUEST MY DISCOVERY CHAT</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
-           
+                            
                             <p class="text-center text-[10px] text-emerald-700/60 pt-1">We’ll get back to you within a few hours during business days.</p>
                         </form>
-
-                        <!-- Success Message -->
+                        
+                        <!-- Success Message (hidden by default) -->
                         <div id="form-success" class="hidden text-center py-8">
                             <div class="mx-auto w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-5">
                                 <i class="fa-solid fa-check text-emerald-700 text-3xl"></i>
                             </div>
                             <h4 class="font-semibold text-xl tracking-tight text-emerald-900 mb-2">Thank you! Your request is in.</h4>
                             <p class="text-emerald-700 max-w-xs mx-auto">We’ll reach out within a few hours to schedule your free 15-minute discovery chat. Looking forward to it!</p>
-           
-                            <button onclick="resetForm()"
+                            
+                            <button onclick="resetForm()" 
                                     class="mt-6 text-sm font-medium text-emerald-700 hover:text-emerald-800 underline underline-offset-4">
                                 Submit another request
                             </button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="bg-emerald-950 text-white py-16">
