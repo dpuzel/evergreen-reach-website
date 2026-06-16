@@ -704,7 +704,10 @@
                         <h3 class="font-semibold text-2xl tracking-tight mb-2 text-emerald-100">Book Your Free Discovery Chat</h3>
                         <p class="text-sm text-slate-600 mb-8">Tell us a little about your business and we’ll reach out within a few hours to schedule a time that works for you.</p>
                         
-                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <form id="contact-form" action="https://formspree.io/f/mrevjdrq" method="POST" class="space-y-5">
+                            <!-- Hidden fields -->
+                            <input type="hidden" name="_subject" value="New Website Lead - Evergreen Reach!">
+                            <input type="hidden" name="_gotcha" style="display:none;">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">YOUR NAME</label>
