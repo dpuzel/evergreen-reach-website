@@ -862,39 +862,36 @@
             });
         }
 
-        // Contact form handler - clean and functional
+        // Contact form handler with Formspree
         function handleFormSubmit(e) {
-            e.preventDefault();
-            
-            const form = document.getElementById('contact-form');
-            const successMsg = document.getElementById('form-success');
-            
-            // Basic validation already handled by required attributes
-            // In real deployment this would POST to Vercel function / Formspree / etc.
-            
-            // Hide form, show success
-            form.style.display = 'none';
-            successMsg.classList.remove('hidden');
-            successMsg.classList.add('flex', 'flex-col', 'items-center');
-            
-            // Optional: log for debugging / future analytics
-            console.log('%c[Evergreen Reach] Form submitted successfully (demo mode)', 'color:#166534');
-            
-            // In production you would do:
-            // fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+            // Let Formspree handle the actual submission
+            // We just enhance the UX with success message
         }
 
         function resetForm() {
             const form = document.getElementById('contact-form');
             const successMsg = document.getElementById('form-success');
-            
-            successMsg.classList.remove('flex', 'flex-col', 'items-center');
+        
             successMsg.classList.add('hidden');
             form.style.display = 'block';
             form.reset();
-            
-            // Scroll back to top of form nicely
+        
+            // Scroll back nicely
             form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Auto-show success message after Formspree submits
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+        
+            form.addEventListener('submit', function() {
+                // Give Formspree a tiny moment to submit
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    const successMsg = document.getElementById('form-success');
+                    successMsg.classList.remove('hidden');
+                    successMsg.classList.add('flex', 'flex-col', 'items-center');
+                }, 700);
         }
 
         // Keyboard accessibility for hamburger
