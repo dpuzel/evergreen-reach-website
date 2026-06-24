@@ -73,7 +73,7 @@
         }
         
         .nav-link:hover {
-            color: #166534;
+            color: #d1fae5;
         }
 
         .service-card, .plan-card, .story-card, .step-card {
@@ -106,9 +106,10 @@
         }
 
         .nav-scrolled {
-            box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
-            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.3);
+            background-color: rgba(16, 42, 34, 0.95);
             backdrop-filter: blur(12px);
+            border-color: #14532d;
         }
 
         .smooth-scroll {
@@ -139,70 +140,11 @@
             background: linear-gradient(to right, transparent, #e5e5e5, transparent);
         }
 
-        /* =========================================
-           PROFESSIONAL WARM DARK MODE STYLES
-           Deep forest greens + calm dark backgrounds
-           ========================================= */
-        .dark .service-card,
-        .dark .plan-card,
-        .dark .step-card {
-            background-color: #0f2a22;
-            border-color: #14532d;
-            color: #d1fae5;
-        }
-
-        .dark .plan-card.popular {
-            background-color: #0f2a22;
-            border-color: #166534;
-        }
-
-        .dark .form-input {
-            background-color: #0f2a22;
-            border-color: #14532d;
-            color: #d1fae5;
-        }
-
-        .dark .form-input:focus {
-            box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
-            border-color: #166534;
-        }
-
-        .dark .section-header {
-            color: #d1fae5;
-        }
-
-        .dark .nav-link {
-            color: #a7f3d0;
-        }
-
-        .dark .nav-link:hover {
-            color: #d1fae5;
-        }
-
-        .dark .nav-scrolled {
-            background-color: rgba(15, 42, 34, 0.95);
-            border-color: #14532d;
-        }
-
-        .dark .testimonial-quote {
-            color: #d1fae5;
-        }
-
-        /* Improve text contrast + hierarchy in dark mode */
-        .dark p,
-        .dark li {
-            color: #a7f3d0;
-        }
-
-        .dark .text-slate-600,
-        .dark .text-slate-700 {
-            color: #86efac;
-        }
     </style>
 </head>
-<body class="smooth-scroll bg-[#f8f7f4] text-slate-800 dark:bg-emerald-950 dark:text-emerald-100">
+<body class="smooth-scroll bg-emerald-950 text-emerald-100">
     <!-- NAVBAR -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-emerald-950 border-b border-slate-100 dark:border-emerald-800 transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-emerald-950 border-b border-emerald-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
@@ -227,23 +169,23 @@
                     </div>
                     
                     <div>
-                        <span class="font-bold text-2xl tracking-tighter text-emerald-900 dark:text-emerald-100">Evergreen Reach</span>
+                        <span class="font-bold text-2xl tracking-tighter text-emerald-900">Evergreen Reach</span>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
-                    <a href="#story" class="nav-link text-slate-700 hover:text-emerald-800">Our Story</a>
-                    <a href="#way" class="nav-link text-slate-700 hover:text-emerald-800">The Evergreen Way</a>
-                    <a href="#services" class="nav-link text-slate-700 hover:text-emerald-800">What We Tend</a>
-                    <a href="#process" class="nav-link text-slate-700 hover:text-emerald-800">How It Works</a>
-                    <a href="#plans" class="nav-link text-slate-700 hover:text-emerald-800">Plans</a>
-                    <a href="#what-people-say" class="nav-link text-slate-700 hover:text-emerald-800">Stories</a>
+                    <a href="#story" class="nav-link text-emerald-200 hover:text-emerald-100">Our Story</a>
+                    <a href="#way" class="nav-link text-emerald-200 hover:text-emerald-100">The Evergreen Way</a>
+                    <a href="#services" class="nav-link text-emerald-200 hover:text-emerald-100">What We Tend</a>
+                    <a href="#process" class="nav-link text-emerald-200 hover:text-emerald-100">How It Works</a>
+                    <a href="#plans" class="nav-link text-emerald-200 hover:text-emerald-100">Plans</a>
+                    <a href="#what-people-say" class="nav-link text-emerald-200 hover:text-emerald-100">Stories</a>
                 </div>
 
                 <div class="hidden md:flex items-center gap-x-4">
                     <a href="#contact" 
-                       class="px-6 py-2.5 text-sm font-semibold rounded-2xl border border-emerald-700 text-emerald-200 hover:bg-emerald-900/30 dark:border-emerald-600 transition-colors">
+                       class="px-6 py-2.5 text-sm font-semibold rounded-2xl border border-emerald-600 text-emerald-100 hover:bg-emerald-800/40 transition-colors">
                         Get Started
                     </a>
                     <a href="#contact" 
@@ -254,7 +196,7 @@
 
                 <!-- Mobile Hamburger -->
                 <button id="hamburger-btn"
-                        class="md:hidden w-11 h-11 flex items-center justify-center text-emerald-900 hover:bg-emerald-50 rounded-2xl transition-colors"
+                        class="md:hidden w-11 h-11 flex items-center justify-center text-emerald-100 hover:bg-emerald-800 rounded-2xl transition-colors"
                         aria-label="Toggle menu">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
@@ -262,18 +204,18 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 dark:border-emerald-800 bg-white dark:bg-emerald-950">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-emerald-950">
             <div class="px-6 py-8 flex flex-col gap-y-5 text-base font-medium">
-                <a href="#story" class="mobile-nav-link py-1 text-slate-700 active:text-emerald-800">Our Story</a>
-                <a href="#way" class="mobile-nav-link py-1 text-slate-700 active:text-emerald-800">The Evergreen Way</a>
-                <a href="#services" class="mobile-nav-link py-1 text-slate-700 active:text-emerald-800">What We Tend</a>
-                <a href="#process" class="mobile-nav-link py-1 text-slate-700 active:text-emerald-800">How It Works</a>
-                <a href="#plans" class="mobile-nav-link py-1 text-slate-700 active:text-emerald-800">Plans</a>
-                <a href="#what-people-say" class="mobile-nav-link py-1 text-slate-700 active:text-emerald-800">Stories</a>
+                <a href="#story" class="mobile-nav-link py-1 text-emerald-200 active:text-emerald-100">Our Story</a>
+                <a href="#way" class="mobile-nav-link py-1 text-emerald-200 active:text-emerald-100">The Evergreen Way</a>
+                <a href="#services" class="mobile-nav-link py-1 text-emerald-200 active:text-emerald-100">What We Tend</a>
+                <a href="#process" class="mobile-nav-link py-1 text-emerald-200 active:text-emerald-100">How It Works</a>
+                <a href="#plans" class="mobile-nav-link py-1 text-emerald-200 active:text-emerald-100">Plans</a>
+                <a href="#what-people-say" class="mobile-nav-link py-1 text-emerald-200 active:text-emerald-100">Stories</a>
                 
-                <div class="pt-4 border-t border-slate-100 flex flex-col gap-y-3">
+                <div class="pt-4 border-t border-emerald-800 flex flex-col gap-y-3">
                     <a href="#contact" 
-                       class="mobile-nav-link w-full text-center px-6 py-3 rounded-2xl border border-emerald-700 text-emerald-800 font-semibold">
+                       class="mobile-nav-link w-full text-center px-6 py-3 rounded-2xl border border-emerald-600 text-emerald-100 font-semibold">
                         Get Started
                     </a>
                     <a href="#contact" 
@@ -286,7 +228,7 @@
     </nav>
 
     <!-- HERO -->
-    <header class="pt-20 min-h-[95vh] flex items-center relative overflow-hidden text-white bg-cover bg-center bg-no-repeat dark:brightness-[0.85]"
+    <header class="pt-20 min-h-[95vh] flex items-center relative overflow-hidden text-white bg-cover bg-center bg-no-repeat brightness-[0.85]"
             style="background-image: linear-gradient(rgba(13, 62, 49, 0.45), rgba(13, 62, 9, 0.33)), url('https://images.unsplash.com/photo-1719154884392-36a9b707a4a4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
         <!-- 
             HERO BACKGROUND IMAGE:
@@ -345,9 +287,9 @@
     <!-- OUR STORY -->
     <section id="story" class="max-w-5xl mx-auto px-6 pt-20 pb-16">
         <div class="text-center mb-12">
-            <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">OUR ROOTS</span>
-            <h2 class="section-header text-emerald-900">OUR STORY</h2>
-            <p class="mt-3 text-2xl text-emerald-600/80 max-w-md mx-auto">We're here for the businesses that build communities.</p>
+            <span class="inline-block px-4 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">OUR ROOTS</span>
+            <h2 class="section-header text-emerald-100">OUR STORY</h2>
+            <p class="mt-3 text-2xl text-emerald-200/80 max-w-md mx-auto">We're here for the businesses that build communities.</p>
         </div>
 
         <div class="prose prose-lg max-w-3xl mx-auto text-emerald-400">
@@ -369,60 +311,60 @@
     <!-- THE EVERGREEN WAY -->
     <section id="way" class="max-w-6xl mx-auto px-6 py-20">
         <div class="text-center mb-12">
-            <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">OUR PROMISE</span>
-            <h2 class="section-header text-emerald-900">THE EVERGREEN WAY</h2>
+            <span class="inline-block px-4 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">OUR PROMISE</span>
+            <h2 class="section-header text-emerald-100">THE EVERGREEN WAY</h2>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Value 1 -->
-            <div class="service-card bg-white rounded-3xl p-8 border border-emerald-100/60">
+            <div class="service-card bg-emerald-1000 rounded-3xl p-8 border border-emerald-100/60">
                 <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6">
                     <i class="fa-solid fa-handshake text-emerald-700 text-2xl"></i>
                 </div>
-                <h3 class="font-semibold text-2xl tracking-tight mb-3 text-emerald-100">Rooted in Honesty</h3>
-                <p class="text-slate-600 leading-relaxed">We tell you exactly what’s happening and what’s possible. No fluff, ever.</p>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3 text-emerald-50">Rooted in Honesty</h3>
+                <p class="text-emerald-500 leading-relaxed">We tell you exactly what’s happening and what’s possible. No fluff, ever.</p>
             </div>
             
             <!-- Value 2 -->
-            <div class="service-card bg-white rounded-3xl p-8 border border-emerald-100/60">
+            <div class="service-card bg-emerald-1000 rounded-3xl p-8 border border-emerald-100/60">
                 <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6">
                     <i class="fa-solid fa-users text-emerald-700 text-2xl"></i>
                 </div>
-                <h3 class="font-semibold text-2xl tracking-tight mb-3 text-emerald-100">Grown Together</h3>
-                <p class="text-slate-600 leading-relaxed">Your success is our success. We celebrate your wins like they’re our own.</p>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3 text-emerald-50">Grown Together</h3>
+                <p class="text-emerald-500 leading-relaxed">Your success is our success. We celebrate your wins like they’re our own.</p>
             </div>
             
             <!-- Value 3 -->
-            <div class="service-card bg-white rounded-3xl p-8 border border-emerald-100/60">
+            <div class="service-card bg-emerald-1000 rounded-3xl p-8 border border-emerald-100/60">
                 <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6">
                     <i class="fa-solid fa-seedling text-emerald-700 text-2xl"></i>
                 </div>
-                <h3 class="font-semibold text-2xl tracking-tight mb-3 text-emerald-100">Reaching Further</h3>
-                <p class="text-slate-600 leading-relaxed">We help your business become the obvious choice in your community.</p>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3 text-emerald-50">Reaching Further</h3>
+                <p class="text-emerald-500 leading-relaxed">We help your business become the obvious choice in your community.</p>
             </div>
         </div>
     </section>
 
     <!-- WHAT WE TEND -->
-    <section id="services" class="bg-white dark:bg-emerald-950 py-20 border-y border-slate-100 dark:border-emerald-800">
+    <section id="services" class="bg-emerald-900 py-20 border-y border-slate-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900 dark:text-emerald-200 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">WHAT WE ACTUALLY DO</span>
-                <h2 class="section-header text-emerald-900">WHAT WE TEND</h2>
-                <p class="mt-3 text-xl text-emerald-800/80">Reliable care for what matters most.</p>
+                <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold tracking-[1.5px] mb-4">WHAT WE ACTUALLY DO</span>
+                <h2 class="section-header text-emerald-50">WHAT WE TEND</h2>
+                <p class="mt-3 text-xl text-emerald-100/80">Reliable care for what matters most.</p>
             </div>
 
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Service 1: GBP -->
-                <div class="service-card bg-[#f8f7f4] dark:bg-emerald-950 rounded-3xl p-8 border border-emerald-100/50 dark:border-emerald-800 flex flex-col">
+                <div class="service-card bg-emerald-950 rounded-3xl p-8 border border-emerald-100/50 flex flex-col">
                     <div class="mb-auto">
                         <div class="flex items-center gap-x-3 mb-5">
                             <div class="w-10 h-10 rounded-2xl bg-emerald-800 flex-shrink-0 flex items-center justify-center">
                                 <i class="fa-solid fa-map-marker-alt text-white text-xl"></i>
                             </div>
-                            <h3 class="font-semibold text-2xl tracking-tight text-emerald-100">Google Business Profile Mastery</h3>
+                            <h3 class="font-semibold text-2xl tracking-tight text-emerald-50">Google Business Profile Mastery</h3>
                         </div>
-                        <p class="text-slate-600 mb-6">Your Google listing is often the first impression people get. We make sure it’s accurate, active, and working for you.</p>
+                        <p class="text-emerald-300 mb-6">Your Google listing is often the first impression people get. We make sure it’s accurate, active, and working for you.</p>
                         
                         <ul class="space-y-3 text-sm">
                             <li class="flex items-start gap-x-3"><i class="fa-solid fa-check mt-1 check-icon flex-shrink-0"></i> <span>Complete profile optimization and verification</span></li>
@@ -434,15 +376,15 @@
                 </div>
 
                 <!-- Service 2: Website Care -->
-                <div class="service-card bg-[#f8f7f4] dark:bg-emerald-950 rounded-3xl p-8 border border-emerald-100/50 dark:border-emerald-800 flex flex-col">
+                <div class="service-card bg-emerald-950 rounded-3xl p-8 border border-emerald-100/50 flex flex-col">
                     <div class="mb-auto">
                         <div class="flex items-center gap-x-3 mb-5">
                             <div class="w-10 h-10 rounded-2xl bg-emerald-800 flex-shrink-0 flex items-center justify-center">
                                 <i class="fa-solid fa-globe text-white text-xl"></i>
                             </div>
-                            <h3 class="font-semibold text-2xl tracking-tight text-emerald-100">Website Care &amp; Steady Growth</h3>
+                            <h3 class="font-semibold text-2xl tracking-tight text-emerald-50">Website Care &amp; Steady Growth</h3>
                         </div>
-                        <p class="text-slate-600 mb-6">We handle the monthly upkeep so your website stays fast, secure, and quietly working in the background.</p>
+                        <p class="text-emerald-300 mb-6">We handle the monthly upkeep so your website stays fast, secure, and quietly working in the background.</p>
                         <ul class="space-y-3 text-sm">
                             <li class="flex items-start gap-x-3"><i class="fa-solid fa-check mt-1 check-icon flex-shrink-0"></i> <span>Monthly security updates, speed checks, and plugin maintenance</span></li>
                             <li class="flex items-start gap-x-3"><i class="fa-solid fa-check mt-1 check-icon flex-shrink-0"></i> <span>Small content or design tweaks when you need them</span></li>
@@ -454,15 +396,15 @@
                 </div>
 
                 <!-- Service 3: Lead Gen -->
-                <div class="service-card bg-[#f8f7f4] dark:bg-emerald-950 rounded-3xl p-8 border border-emerald-100/50 dark:border-emerald-800 flex flex-col">
+                <div class="service-card bg-emerald-950 rounded-3xl p-8 border border-emerald-100/50 flex flex-col">
                     <div class="mb-auto">
                         <div class="flex items-center gap-x-3 mb-5">
                             <div class="w-10 h-10 rounded-2xl bg-emerald-800 flex-shrink-0 flex items-center justify-center">
                                 <i class="fa-solid fa-users text-white text-xl"></i>
                             </div>
-                            <h3 class="font-semibold text-2xl tracking-tight text-emerald-100">Local Lead Generation Support</h3>
+                            <h3 class="font-semibold text-2xl tracking-tight text-emerald-50">Local Lead Generation Support</h3>
                         </div>
-                        <p class="text-slate-600 mb-6">Being found is one thing. Being chosen is everything. We help turn your online presence into real, local customers.</p>
+                        <p class="text-emerald-300 mb-6">Being found is one thing. Being chosen is everything. We help turn your online presence into real, local customers.</p>
                         
                         <ul class="space-y-3 text-sm">
                             <li class="flex items-start gap-x-3"><i class="fa-solid fa-check mt-1 check-icon flex-shrink-0"></i> <span>Local SEO improvements and visibility boosts</span></li>
@@ -479,50 +421,50 @@
     <!-- SIMPLE. HONEST. EFFECTIVE. -->
     <section id="process" class="max-w-6xl mx-auto px-6 py-20">
         <div class="text-center mb-14">
-            <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">HOW WE WORK</span>
-            <h2 class="section-header text-emerald-900">SIMPLE. HONEST. EFFECTIVE.</h2>
-            <p class="mt-3 text-xl text-emerald-800/80">We keep things simple and straightforward. Here’s exactly what working with us looks like:</p>
+            <span class="inline-block px-4 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">HOW WE WORK</span>
+            <h2 class="section-header text-emerald-100">SIMPLE. HONEST. EFFECTIVE.</h2>
+            <p class="mt-3 text-xl text-emerald-300/80">We keep things simple and straightforward. Here’s exactly what working with us looks like:</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Step 1 -->
-            <div class="step-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/70 rounded-3xl p-7">
+            <div class="step-card bg-emerald-950 border border-emerald-100/70 rounded-3xl p-7">
                 <div class="flex items-center gap-x-4 mb-5">
-                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-800 text-white flex items-center justify-center font-mono text-sm font-bold">01</div>
+                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-900 text-white flex items-center justify-center font-mono text-sm font-bold">01</div>
                     <h3 class="font-semibold text-xl tracking-tight">Discovery Chat</h3>
                 </div>
-                <p class="text-slate-600">We start with a relaxed conversation (text, email, or call, whatever works for you). We talk about your business, what’s frustrating you online, and what “success” would look like.</p>
+                <p class="text-emerald-300">We start with a relaxed conversation (text, email, or call, whatever works for you). We talk about your business, what’s frustrating you online, and what “success” would look like.</p>
             </div>
 
             <!-- Step 2 -->
-            <div class="step-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/70 rounded-3xl p-7">
+            <div class="step-card bg-emerald-950 border border-emerald-100/70 rounded-3xl p-7">
                 <div class="flex items-center gap-x-4 mb-5">
-                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-800 text-white flex items-center justify-center font-mono text-sm font-bold">02</div>
+                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-900 text-white flex items-center justify-center font-mono text-sm font-bold">02</div>
                     <h3 class="font-semibold text-xl tracking-tight">Audit &amp; Roadmap</h3>
                 </div>
-                <p class="text-slate-600">We take a close look at your Google presence, website, and local visibility. Then we put together a clear, no-jargon plan tailored to your business.</p>
+                <p class="text-emerald-300">We take a close look at your Google presence, website, and local visibility. Then we put together a clear, no-jargon plan tailored to your business.</p>
             </div>
 
             <!-- Step 3 -->
-            <div class="step-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/70 rounded-3xl p-7">
+            <div class="step-card bg-emerald-950 border border-emerald-100/70 rounded-3xl p-7">
                 <div class="flex items-center gap-x-4 mb-5">
-                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-800 text-white flex items-center justify-center font-mono text-sm font-bold">03</div>
+                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-900 text-white flex items-center justify-center font-mono text-sm font-bold">03</div>
                     <h3 class="font-semibold text-xl tracking-tight">We Handle the Work</h3>
                 </div>
-                <p class="text-slate-600">This is the monthly care part. We take care of the posts, updates, maintenance, and optimizations - month after month, so you don’t have to.</p>
+                <p class="text-emerald-300">This is the monthly care part. We take care of the posts, updates, maintenance, and optimizations - month after month, so you don’t have to.</p>
             </div>
 
             <!-- Step 4 -->
-            <div class="step-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/70 rounded-3xl p-7">
+            <div class="step-card bg-emerald-950 border border-emerald-100/70 rounded-3xl p-7">
                 <div class="flex items-center gap-x-4 mb-5">
-                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-800 text-white flex items-center justify-center font-mono text-sm font-bold">04</div>
+                    <div class="flex-shrink-0 w-9 h-9 rounded-2xl bg-emerald-900 text-white flex items-center justify-center font-mono text-sm font-bold">04</div>
                     <h3 class="font-semibold text-xl tracking-tight">Monthly Growth Reports</h3>
                 </div>
-                <p class="text-slate-600">Every month you’ll get a simple report showing what we worked on and how things are progressing. We can hop on a quick call or keep it to messages if you prefer.</p>
+                <p class="text-emerald-300">Every month you’ll get a simple report showing what we worked on and how things are progressing. We can hop on a quick call or keep it to messages if you prefer.</p>
             </div>
         </div>
         <div class="text-center mt-12">
-            <p class="text-emerald-300 max-w-2xl mx-auto">
+            <p class="text-emerald-100 max-w-2xl mx-auto">
                 No long contracts.<br> No surprises.<br> Just steady, reliable care from people who show up.
             </p>
         </div>
@@ -540,14 +482,14 @@
 
             <div class="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <!-- Basic -->
-                <div class="plan-card bg-white dark:bg-emerald-950 dark:text-emerald-100 rounded-3xl p-8 flex flex-col border border-emerald-100 dark:border-emerald-800">
+                <div class="plan-card bg-emerald-950 rounded-3xl p-8 flex flex-col border border-emerald-800">
                     <div>
                         <div class="flex items-baseline gap-x-1 mb-1">
                             <span class="text-5xl font-bold tracking-tighter">$99</span>
                             <span class="text-emerald-700 font-medium">/mo</span>
                         </div>
                         <div class="font-semibold text-xl tracking-tight mb-1">Basic Care</div>
-                        <p class="text-sm text-slate-600 mb-6">A solid start with reliable monthly care</p>
+                        <p class="text-sm text-emerald-200 mb-6">A solid start with reliable monthly care</p>
                     </div>
                     
                     <ul class="space-y-[13px] text-sm flex-1 mb-8">
@@ -557,13 +499,13 @@
                         <li class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-600 mt-[3px]"></i> <span>Email support</span></li>
                     </ul>
                     
-                    <a href="#contact" class="mt-auto block text-center w-full py-3.5 rounded-2xl border border-emerald-800 dark:border-emerald-600 font-semibold text-emerald-800 dark:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors">
+                    <a href="#contact" class="mt-auto block text-center w-full py-3.5 rounded-2xl border border-emerald-600 text-emerald-100 font-semibold hover:bg-emerald-800/30 transition-colors">
                         Start with Basic
                     </a>
                 </div>
 
                 <!-- Standard - MOST POPULAR -->
-                <div class="plan-card popular bg-white dark:bg-emerald-950 dark:text-emerald-100 rounded-3xl p-8 flex flex-col border-2 border-emerald-600 dark:border-emerald-500 relative shadow-xl">
+                <div class="plan-card popular bg-emerald-950 rounded-3xl p-8 flex flex-col border-2 border-emerald-600 border-emerald-500 relative shadow-xl">
                     <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[10px] font-extrabold tracking-[1.5px] px-5 py-1 rounded-full shadow">MOST POPULAR</div>
                     
                     <div>
@@ -572,7 +514,7 @@
                             <span class="text-emerald-700 font-medium">/mo</span>
                         </div>
                         <div class="font-semibold text-xl tracking-tight mb-1">Standard Care</div>
-                        <p class="text-sm text-slate-600 mb-6">The right balance, most businesses love this one</p>
+                        <p class="text-sm text-emerald-200 mb-6">The right balance, most businesses love this one</p>
                     </div>
                     
                     <ul class="space-y-[13px] text-sm flex-1 mb-8">
@@ -589,14 +531,14 @@
                 </div>
 
                 <!-- Premium -->
-                <div class="plan-card bg-white dark:bg-emerald-950 dark:text-emerald-100 rounded-3xl p-8 flex flex-col border border-emerald-100 dark:border-emerald-800">
+                <div class="plan-card bg-emerald-950 rounded-3xl p-8 flex flex-col border border-emerald-800">
                     <div>
                         <div class="flex items-baseline gap-x-1 mb-1">
                             <span class="text-5xl font-bold tracking-tighter">$249</span>
                             <span class="text-emerald-700 font-medium">/mo</span>
                         </div>
                         <div class="font-semibold text-xl tracking-tight mb-1">Premium Care</div>
-                        <p class="text-sm text-slate-600 mb-6">Full support for businesses ready to shine in their community</p>
+                        <p class="text-sm text-emerald-200 mb-6">Full support for businesses ready to shine in their community</p>
                     </div>
                     
                     <ul class="space-y-[13px] text-sm flex-1 mb-8">
@@ -607,7 +549,7 @@
                         <li class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-600 mt-[3px]"></i> <span>Direct phone/text access to our team</span></li>
                     </ul>
                     
-                    <a href="#contact" class="mt-auto block text-center w-full py-3.5 rounded-2xl border border-emerald-800 dark:border-emerald-600 font-semibold text-emerald-800 dark:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors">
+                    <a href="#contact" class="mt-auto block text-center w-full py-3.5 rounded-2xl border border-emerald-600 text-emerald-100 font-semibold hover:bg-emerald-800/30 transition-colors">
                         Go Premium
                     </a>
                 </div>
@@ -622,7 +564,7 @@
     <!-- WHAT PEOPLE ARE SAYING (Placeholder for social proof while building real testimonials) -->
     <section id="what-people-say" class="max-w-6xl mx-auto px-6 py-20">
         <div class="text-center mb-12">
-            <span class="inline-block px-4 py-1 rounded-full bg-emerald-900 dark:bg-emerald-800 text-emerald-200 text-xs font-bold tracking-[1.5px] mb-4">EARLY CONVERSATIONS</span>
+            <span class="inline-block px-4 py-1 rounded-full bg-emerald-900 text-emerald-200 text-xs font-bold tracking-[1.5px] mb-4">EARLY CONVERSATIONS</span>
             <h2 class="section-header text-emerald-100">WHAT PEOPLE ARE SAYING</h2>
             <p class="mt-3 text-xl text-emerald-300">We’re still early, but the conversations we’ve had so far have been pretty telling.</p>
         </div>
@@ -680,7 +622,7 @@
 
         <div class="grid md:grid-cols-3 gap-8"> -->
             <!-- Testimonial 1 
-            <div class="story-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/60 rounded-3xl p-8">
+            <div class="story-card bg-emerald-950 border border-emerald-100/60 rounded-3xl p-8">
                 <div class="text-emerald-600 mb-6">
                     <i class="fa-solid fa-quote-left text-4xl opacity-40"></i>
                 </div>
@@ -699,7 +641,7 @@
             </div> -->
 
             <!-- Testimonial 2 
-            <div class="story-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/60 rounded-3xl p-8">
+            <div class="story-card bg-emerald-950 border border-emerald-100/60 rounded-3xl p-8">
                 <div class="text-emerald-600 mb-6">
                     <i class="fa-solid fa-quote-left text-4xl opacity-40"></i>
                 </div>
@@ -718,7 +660,7 @@
             </div> -->
 
             <!-- Testimonial 3 
-            <div class="story-card bg-white dark:bg-emerald-950 dark:border-emerald-800 border border-emerald-100/60 rounded-3xl p-8">
+            <div class="story-card bg-emerald-950 border border-emerald-100/60 rounded-3xl p-8">
                 <div class="text-emerald-600 mb-6">
                     <i class="fa-solid fa-quote-left text-4xl opacity-40"></i>
                 </div>
@@ -739,7 +681,7 @@
     </section> -->
 
     <!-- LET’S GROW YOUR REACH / CONTACT -->
-    <section id="contact" class="bg-white dark:bg-emerald-950 border-t border-slate-100 dark:border-emerald-800 py-20">
+    <section id="contact" class="bg-emerald-950 border-t border-slate-100 py-20">
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid lg:grid-cols-5 gap-x-16 gap-y-12">
                 
@@ -747,25 +689,25 @@
                 <div class="lg:col-span-2">
                     <div class="sticky top-24">
                         <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-[1.5px] mb-4">LET'S TALK</span>
-                        <h2 class="section-header text-emerald-900 dark:text-emerald-200 tracking-tighter">LET’S GROW YOUR REACH</h2>
+                        <h2 class="section-header text-emerald-200 tracking-tighter">LET’S GROW YOUR REACH</h2>
                         
-                        <p class="mt-4 text-xl text-emerald-400">Ready to Get Your Online Presence Working for You?</p>
+                        <p class="mt-4 text-xl text-emerald-300">Ready to Get Your Online Presence Working for You?</p>
                         
-                        <p class="mt-4 text-[15px] leading-relaxed text-slate-600">You’ve built something worth being proud of. Now let’s make sure people can actually find it.</p>
+                        <p class="mt-4 text-[15px] leading-relaxed text-emerald-600">You’ve built something worth being proud of. Now let’s make sure people can actually find it.</p>
 
-                        <p class="mt-4 text-[15px] leading-relaxed text-slate-600">We’re not here to sell you a big package or lock you into anything long-term. We just want to help good businesses show up better online, month after month, with honest work and steady results.</p>
+                        <p class="mt-4 text-[15px] leading-relaxed text-emerald-600">We’re not here to sell you a big package or lock you into anything long-term. We just want to help good businesses show up better online, month after month, with honest work and steady results.</p>
                         
-                        <p class="mt-4 text-[15px] leading-relaxed text-slate-600">If that sounds like what you’ve been looking for, let’s talk.</p>
+                        <p class="mt-4 text-[15px] leading-relaxed text-emerald-500">If that sounds like what you’ve been looking for, let’s talk.</p>
 
-                        <p class="mt-4 text-[15px] leading-relaxed text-slate-600"><b>Shoot us a message</b> and we’ll set up a relaxed, no-pressure chat. We’ll talk about your business, see if we’re a good fit, and go from there.</p>
+                        <p class="mt-4 text-[15px] leading-relaxed text-emerald-600"><b>Shoot us a message</b> and we’ll set up a relaxed, no-pressure chat. We’ll talk about your business, see if we’re a good fit, and go from there.</p>
                         
-                        <p class="mt-4 text-[15px] leading-relaxed text-slate-600">No hard sell.<br> No obligation.<br> Just two people figuring out if we can help each other.</p>
+                        <p class="mt-4 text-[15px] leading-relaxed text-emerald-600">No hard sell.<br> No obligation.<br> Just two people figuring out if we can help each other.</p>
                         
-                        <p class="mt-4 text-[15px] leading-relaxed text-slate-600">We'd love to hear from you.</p>
+                        <p class="mt-4 text-[15px] leading-relaxed text-emerald-600">We'd love to hear from you.</p>
                         
                         <div class="mt-8 space-y-4 text-sm">
                             <a href="mailto:hello@evergreen-reach.com" class="flex items-center gap-x-4 group">
-                                <div class="w-10 h-10 rounded-2xl bg-emerald-100 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
+                                <div class="w-10 h-10 rounded-2xl bg-emerald-50 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
                                     <i class="fa-solid fa-envelope text-emerald-700"></i>
                                 </div>
                                 <div>
@@ -775,7 +717,7 @@
                             </a>
                             
                             <a href="tel:2082695369" class="flex items-center gap-x-4 group">
-                                <div class="w-10 h-10 rounded-2xl bg-emerald-100 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
+                                <div class="w-10 h-10 rounded-2xl bg-emerald-50 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
                                     <i class="fa-solid fa-phone text-emerald-700"></i>
                                 </div>
                                 <div>
@@ -785,15 +727,15 @@
                             </a>
                         </div>
                         
-                        <p class="mt-8 text-xs text-emerald-700/70">No spam, ever. We respect your time and inbox.</p>
+                        <p class="mt-8 text-xs text-emerald-50/70">No spam, ever. We respect your time and inbox.</p>
                     </div>
                 </div>
 
                 <!-- Right: Form -->
                 <div class="lg:col-span-3">
-                    <div class="bg-[#f8f7f4] dark:bg-emerald-950 border border-emerald-100/70 dark:border-emerald-800 rounded-3xl p-8 md:p-10">
-                        <h3 class="font-semibold text-2xl tracking-tight mb-2 text-emerald-100">Book Your Free Discovery Chat</h3>
-                        <p class="text-sm text-slate-600 mb-8">Tell us a little about your business and we’ll reach out within a few hours to schedule a time that works for you.</p>
+                    <div class="bg-emerald-950 border border-emerald-100/70 rounded-3xl p-8 md:p-10">
+                        <h3 class="font-semibold text-2xl tracking-tight mb-2 text-emerald-200">Book Your Free Discovery Chat</h3>
+                        <p class="text-sm text-emerald-400 mb-8">Tell us a little about your business and we’ll reach out within a few hours to schedule a time that works for you.</p>
        
                         <form id="contact-form" action="https://formspree.io/f/mrevjdrq" method="POST" class="space-y-5">
                             <!-- Hidden fields -->
@@ -804,12 +746,12 @@
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">YOUR NAME</label>
                                     <input type="text" name="name" required
-                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
+                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-emerald-950 text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">BUSINESS NAME</label>
                                     <input type="text" name="business"
-                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
+                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-emerald-950 text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                             </div>
            
@@ -817,19 +759,19 @@
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">EMAIL ADDRESS</label>
                                     <input type="email" name="email" required
-                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
+                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-emerald-950 text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">PHONE NUMBER</label>
                                     <input type="tel" name="phone"
-                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600">
+                                       class="form-input w-full px-4 py-3 rounded-2xl border border-emerald-200 bg-emerald-950 text-sm placeholder:text-slate-400 focus:border-emerald-600">
                                 </div>
                             </div>
            
                             <div>
                                 <label class="block text-xs font-semibold tracking-wider text-emerald-100 mb-1.5">WHAT'S GOING ON WITH YOUR ONLINE PRESENCE RIGHT NOW?</label>
                                 <textarea name="message" rows="4" required
-                                          class="form-input w-full px-4 py-3.5 rounded-2xl border border-emerald-200 bg-white text-sm placeholder:text-slate-400 focus:border-emerald-600 resize-y min-h-[110px]"
+                                          class="form-input w-full px-4 py-3.5 rounded-2xl border border-emerald-200 bg-emerald-950 text-sm placeholder:text-slate-400 focus:border-emerald-600 resize-y min-h-[110px]"
                                           placeholder="Tell us about your Google listing, website, or what kind of customers you're hoping to reach..."></textarea>
                             </div>
            
@@ -839,7 +781,7 @@
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
            
-                            <p class="text-center text-[10px] text-emerald-700/60 pt-1">We’ll get back to you within a few hours during business days.</p>
+                            <p class="text-center text-[10px] text-emerald-200/60 pt-1">We’ll get back to you within a few hours during business days.</p>
                         </form>
 
                         <!-- Success Message -->
@@ -982,11 +924,6 @@
         }
     }
 
-    // Force dark mode
-    function forceDarkMode() {
-        document.documentElement.classList.add('dark');
-    }
-
     // Boot everything
     function initializeSite() {
         initializeTailwind();
@@ -995,7 +932,6 @@
         initSmoothScroll();
         initContactForm();
         initAccessibility();
-        forceDarkMode();
 
         console.log('%c🌲 Huckleberry brother — clean site loaded. Ready to crush it!', 'color:#166534; font-size: 9px');
     }
